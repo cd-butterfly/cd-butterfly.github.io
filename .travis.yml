@@ -20,3 +20,5 @@ deploy:
   type: git
   repo: https://${GH_TOKEN}@${GH_REF}
   branch: master
+script:
+  echo "success"
