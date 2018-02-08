@@ -10,6 +10,7 @@ install: npm install
 before_script:
   - npm install -g hexo-cli
   - npm install hexo-deployer-git --save
+after_script:
   - hexo g -d
 
 env:
