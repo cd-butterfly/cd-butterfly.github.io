@@ -24,7 +24,7 @@ script:
   - npm install
   - hexo g
   - ls -la
-  - cp ./public .deploy_git
+  - cp -r ./public .deploy_git
   - cd .deploy_git
   - git init
   - git config user.name "cd_butterfly"
