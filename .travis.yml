@@ -8,8 +8,7 @@ cache:
 install: npm install
 
 before_script:
-  - npm install -g hexo-cli
-  - npm install hexo-deployer-git --save
+  - echo "before_script"
   - git checkout hexo
 
 env:
@@ -19,13 +18,10 @@ env:
 
 after_script:
   - git status
-  - hexo generate --deploy
-  
-deploy:
-  provider: git
-  repo: "https://${GH_TOKEN}@${GH_REF}"
-  branch: master:refs/heads/master
+  - hexo generate
 
 script:
-  - echo "success"
-  - pwd
+  - npm install -g hexo-cli
+  - npm install hexo-deployer-git --save
+  - cd ./hexo/time
+  - hexo g -d
