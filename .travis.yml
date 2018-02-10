@@ -24,7 +24,8 @@ after_script:
 script:
   - cd ./hexo/time
   - npm install
-  - hexo g -d
+  - hexo generate
+  - hexo deploy
   - ls -la
   - cd .deploy_git
   - git config user.name "cd_butterfly"
