@@ -6,9 +6,7 @@ cache:
     - node_modules
 
 install: 
-  - npm install
-  - npm install -g hexo-cli
-  - npm install hexo-deployer-git --save
+    -echo "install"
 
 before_script:
   - echo "before_script"
@@ -24,4 +22,5 @@ after_script:
 
 script:
   - cd ./hexo/time
+  - npm install
   - hexo g -d
