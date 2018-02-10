@@ -16,23 +16,23 @@ before_script:
 env:
   global:
     - GH-REF: github.com/cd-butterfly/cd-butterfly.github.io.git
-
+    - secure: "nQeT+YTR1v0vOl5XL+i/7Gc3OMGkmSFfg4AwREVxpGi79dnA0dRGn4DQYUJ894TOMtw1cT7GeYOreCUUliN6h6vfwa4vdQKy+1C9OyAWp+BsWZHlvWBCO/ujxml8a7NDfA7kNRRgtY9Rd8aUpc+W1u9elHX8FdTgeH9BoQXZnzs4ESAMcJXk7Yuf30x3A1T5TQ8WUhdCNVWQbhdyMxk9k+03cQaoUlxyikY//5hk+iEo6zOZt7mhBzKww2YJEzmZfrzvZ8fHVk3v1E2/NnsjanV4OcnmF/YOiyRMteg8lHw74yGLKubInqN+T80705Ica4/f2N9xe14wluiD+sWahopvKP071/JznyX3koQlb9Rdm9sD7o45GZ1n8YQmPtnOjVOa3tqz47w3bBGyu0Yd+EI/HMHpCrDiynrXFBaYMnxlrpbrJdRZJPz1lpFj4qZk1cuGeAHYtBzA32eRx3WvGJTUlNAs/h92eeLIoWameGPeU0WuocT+5/U4Vzi5ARDu/NFh3yLc3gY5VIvFksJg6blo/NeLnH6BFtf8EEhn/bilDvJ0Dk5O2ksgsNs+bACr+BH6U6cbzt99Wtl2a0SD0P88hND1dfLPnZqq9rePc3VDyquASufAMwFJYtwVU8m6hMZj6BvJTpdZL8bwDlfKnCiI1BTY54rgTkyG+d0aLeI="
 after_script:
   - echo "after_script"
 
 script:
   - cd ./hexo/time
   - npm install
+  - hexo g
+  - ls -la
+  - cp ./public .deploy_git
+  - cd .deploy_git
+  - git init
   - git config user.name "cd_butterfly"
   - git config user.email "cd_butterfly@qq.com"
-  - hexo g -d
- # - ls -la
- # - cd .deploy_git
- # - git config user.name "cd_butterfly"
- # - git config user.email "cd_butterfly@qq.com"
- # - git add -A
- # - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
- # - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:refs/heads/master
+  - git add -A
+  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:refs/heads/master
   
 branches:
   only:

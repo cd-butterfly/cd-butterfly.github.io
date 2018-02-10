@@ -76,11 +76,7 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-#deploy:
-#  type: git
-#  repo: https://github.com/cd-butterfly/cd-butterfly.github.io.git
-#  branch: master
 deploy:
   type: git
-  repo: https://c13b6ba8e41e75d70d0b2f422fb0f1321bb3aead@github.com/cd-butterfly/cd-butterfly.github.io.git
+  repo: https://github.com/cd-butterfly/cd-butterfly.github.io.git
   branch: master
