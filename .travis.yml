@@ -15,12 +15,12 @@ before_script:
 env:
   global:
     - GH-REF: github.com/cd-butterfly/cd-butterfly.github.io.git
-    - secure: "b0lvkdh57jckhUDPA0YcWeG6hwMCI8BsgLuS54bsmzpaKO21lcw5f4rKglieHqpryBYBzdsIn87dGQwWBCwEnoabck3KldbWqHNciCfJ8bwzMQ2neAKDQNtv43Dp0vlhIxNTbBVeDbD4n530VqLGrnG4cPQmMgAIUtKyrbs2Y7F5eeAuuTxapcvI1tp9zLzNt7n+fw2chveZLmJaUVnUscz2dv0AKvbd2qUlTtUNdzNBtV1NJXuo7aMo+Z7MLWxwRvXtZL8I4Ml4CBakSFOW+e14WsmcDkwpAOszVCvm1fljpYN6q91yyOAHsAX7ImSdN7jNhCydc/2oRY2InyY/fqoMUGn5hq5up9uZclyxVqOt/4tV9wQE+SioSsSY1LhTfDYqONTXu+N0j7stW7AKqS3B2Pm7PQMWwcvEtPcjUu7DGadCflziW1udRW9bwHiODgV2tYRJMJUGPAhssogmVbsZgjDboFYbe1Diu+RYm1GUkmTxsyVNRcOe7Qxz5tJCWU0IyMalTIMc57k4G5XoQphtw8nlOL/kIjFCnOtMtUheWuoHC6q8JUle9sv4TUW8YAWm1KgDqmKsbRaqMr4ZLrLST5k0WWN+nmIkDIjMwq9Mrtf4om7NqbA23vn2O0hQd73KNGfm+NCGNeWepZI1+kw5YSZ+l9zxD4hV3VH+AYE="
+    - secure: "lGQsn0P/vOl6A/JFzOxseQ6u8Z/QnxODzH76pxX4auP/vIEa0gixhcDj4vXpJx4FeQpTrDnQBrzvOCNltlXvvRTBKC+oZe8jPkZbu0enNT/cKVO9ltn3I5jz3Upqrb3YmUK3nTW8Jdck8Qwc87xfKoHU2aBOAfZrDJIjWZjXe8B93ntW1M83XDGyssbDHj0ANFE6EPYSAgsuDPJ77e9j4ttxlKsBTaeAiITlVz8BTg+cMNgG9JzPLFe8vI+8a4KlThQzHIwZh3SheWkdctTFUWsJkjRwOosm+i04l/J7qw4HD8uM3WseJmnGWDPf7gaw3VZ2ibWfCHgUvJqCv/9kwexCN1bG8xYc7ARc9fw8aam+6dCihsKUp8rbRydZAxPPWqm0EclUkiBQ8YsmwI+shmjouGB6ndyH9qeQNGQBXC5kmBAfjIUadImooSLp9auvPI7rJiHR9N7QcYlI0OwgvzltgazJjClGo5j1+jHLkK/PQzuXpRIqm9okWZIJXuekOA65JKSqHwfERoGIBqsSh2zmlSp5bCg649lPXTpb1DyIq6nX4icl9N+lllp9VVfU3eA6C/4306+E99cUEKq/UyxbehuQhHzOzMiPrQeT81xMsOCgdlin6yrtZYuYw4W/LrwrqV6yi4UK8VVZdZ6aQQiBYOZwmJxOz6BkXMswswM="
 
 after_script:
   - git add .
   - git commit -m "Update docs"
-  - git push -f "https://${GH_TOKEN}@${GH_REF}" master:refs/for/master
+  - git push -f "https://${GH_TOKEN}@${GH_REF}" master
 
 script:
   - echo "success"
