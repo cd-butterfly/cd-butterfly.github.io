@@ -19,8 +19,8 @@ env:
 
 after_script:
   - git add .
-  - git commit -m "Update docs"
-  - git push -f "https://${GH_TOKEN}@${GH_REF}" master
+  - git commit -m "Update"
+  - git push "https://${GH_TOKEN}@${GH_REF}" master
 
 script:
   - echo "success"
