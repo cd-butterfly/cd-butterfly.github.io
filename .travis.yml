@@ -17,8 +17,7 @@ env:
     - secure: "lGQsn0P/vOl6A/JFzOxseQ6u8Z/QnxODzH76pxX4auP/vIEa0gixhcDj4vXpJx4FeQpTrDnQBrzvOCNltlXvvRTBKC+oZe8jPkZbu0enNT/cKVO9ltn3I5jz3Upqrb3YmUK3nTW8Jdck8Qwc87xfKoHU2aBOAfZrDJIjWZjXe8B93ntW1M83XDGyssbDHj0ANFE6EPYSAgsuDPJ77e9j4ttxlKsBTaeAiITlVz8BTg+cMNgG9JzPLFe8vI+8a4KlThQzHIwZh3SheWkdctTFUWsJkjRwOosm+i04l/J7qw4HD8uM3WseJmnGWDPf7gaw3VZ2ibWfCHgUvJqCv/9kwexCN1bG8xYc7ARc9fw8aam+6dCihsKUp8rbRydZAxPPWqm0EclUkiBQ8YsmwI+shmjouGB6ndyH9qeQNGQBXC5kmBAfjIUadImooSLp9auvPI7rJiHR9N7QcYlI0OwgvzltgazJjClGo5j1+jHLkK/PQzuXpRIqm9okWZIJXuekOA65JKSqHwfERoGIBqsSh2zmlSp5bCg649lPXTpb1DyIq6nX4icl9N+lllp9VVfU3eA6C/4306+E99cUEKq/UyxbehuQhHzOzMiPrQeT81xMsOCgdlin6yrtZYuYw4W/LrwrqV6yi4UK8VVZdZ6aQQiBYOZwmJxOz6BkXMswswM="
 
 after_script:
-  - git status
-  - hexo generate
+  - echo "after_script"
 
 script:
   - npm install -g hexo-cli
