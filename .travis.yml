@@ -6,7 +6,7 @@ cache:
     - node_modules
 
 install: 
-    -echo "install"
+    - echo "install"
 
 before_script:
   - echo "before_script"
