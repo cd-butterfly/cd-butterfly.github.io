@@ -82,5 +82,5 @@ theme: next
 #  branch: master
 deploy:
   type: git
-  repo: https://github.com/cd-butterfly/cd-butterfly.github.io.git
+  repo: https://aba1f9a9ae65918f49121f77ce877e5689da1498@github.com/cd-butterfly/cd-butterfly.github.io.git
   branch: master
