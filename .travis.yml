@@ -24,15 +24,14 @@ after_script:
 script:
   - cd ./hexo/time
   - npm install
-  - hexo generate
-  - hexo deploy
-  - ls -la
-  - cd .deploy_git
-  - git config user.name "cd_butterfly"
-  - git config user.email "cd_butterfly@qq.com"
-  - git add -A
-  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:refs/heads/master
+  - hexo g -d
+ # - ls -la
+ # - cd .deploy_git
+ # - git config user.name "cd_butterfly"
+ # - git config user.email "cd_butterfly@qq.com"
+ # - git add -A
+ # - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"
+ # - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:refs/heads/master
   
 branches:
   only:
