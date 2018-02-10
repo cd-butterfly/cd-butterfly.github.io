@@ -80,3 +80,7 @@ theme: next
 #  type: git
 #  repo: https://github.com/cd-butterfly/cd-butterfly.github.io.git
 #  branch: master
+deploy:
+  type: git
+  repo: "https://${GH_TOKEN}@${GH_REF}"
+  branch: master:refs/heads/master
