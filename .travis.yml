@@ -16,13 +16,15 @@ before_script:
 env:
   global:
     - GH-REF: github.com/cd-butterfly/cd-butterfly.github.io.git
-    
+
 after_script:
   - echo "after_script"
 
 script:
   - cd ./hexo/time
   - npm install
+  - git config user.name "cd_butterfly"
+  - git config user.email "cd_butterfly@qq.com"
   - hexo g -d
  # - ls -la
  # - cd .deploy_git
