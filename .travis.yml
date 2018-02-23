@@ -24,6 +24,7 @@ script:
   - npm install
   - hexo g
   - ls -la
+  - git clone -b master https://${GH_REF} .deploy_git
   - cp -r ./public .deploy_git
   - cd .deploy_git
   - git init
