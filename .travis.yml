@@ -25,7 +25,7 @@ script:
   - hexo g
   - ls -la
   - git clone -b master https://${GH_REF} .deploy_git
-  - cp -r ./public .deploy_git
+  - cp -r ./public/* .deploy_git
   - cd .deploy_git
   - git config user.name "cd_butterfly"
   - git config user.email "cd_butterfly@qq.com"
